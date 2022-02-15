@@ -1,0 +1,29 @@
+<p>admin-product works!</p>
+
+<table class="table table">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>author</th>
+        <th>cost</th>
+    </tr>
+   <tr *ngFor="let x of books">
+        <td> {{x.id}}</td>
+        <td> {{x.name}}</td>
+        <td> {{x.author}}</td>
+        <td> {{x.cost}}</td>
+  
+        
+    </tr>
+  </table>
+
+
+  Book Details:
+<table>
+id:<input type="text" [(ngModel)]="book.id">
+Name:<input type="text" [(ngModel)]="book.name">
+Author:<input type="text" [(ngModel)]="book.author">
+Cost:<input type="text" [(ngModel)]="book.cost">
+<input type="button" (click)="addBook()" value="add Book">
+
+</table>

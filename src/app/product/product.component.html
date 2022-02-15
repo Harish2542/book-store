@@ -1,0 +1,92 @@
+<p>product works!</p>
+
+
+
+<div class="products" *ngIf="isProductOpen">
+    <h1>Products</h1>
+    <table style="width:100%">
+    Search : <input type="text" [(ngModel)]="query">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>name</th>
+            <th>author</th>
+            <th>Cost</th>
+        </tr>
+        <tr *ngFor=" let y of notes | search : query ">
+            <td> {{y.id}}</td>
+            <td> {{y.name}}</td>
+            <td>{{y.author}}</td>
+            <td> {{y.cost}}</td>
+        
+
+            <td><button class="btn btn-primary add" (click)="addToCart(y)">Add to Cart</button></td>
+
+        
+        </tr>
+    </table>
+    <button class="btn btn-primary" (click)="openCart()">My Cart</button>
+    </table>
+</div>
+
+<div class="cart products" *ngIf="isCartOpen">
+    <h1>My Cart</h1>
+    <table style="width:100%">
+      <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>author</th>
+        <th>Cost</th>
+        <th>qnt</th>
+      </tr>
+      <tr *ngFor="let y of cartItems">
+        <td> {{y.id}}</td>
+        <td> {{y.name}}</td>
+        <td>{{y.author}}</td>
+        <td> {{y.cost}}</td>
+        <td>{{y.qnt}}</td>
+        <td><button (click)="increase(y)">+</button> </td>
+        
+        <td><button (click)="decrease(y)">-</button></td>
+      </tr>
+      <tr>Total Amount : {{totalAmt}}</tr>
+    </table>
+    <button class="btn btn-primary" (click)="openHome()">Home</button>
+    <button class="btn btn-primary" (click)="address()">Add Address</button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<table class="table table">
+  <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>author</th>
+      <th>cost</th>
+  </tr>
+ <tr *ngFor="let x of books">
+      <td> {{x.id}}</td>
+      <td> {{x.name}}</td>
+      <td> {{x.author}}</td>
+      <td> {{x.cost}}</td>
+
+      </tr>
+</table>
+
+
+
+
+

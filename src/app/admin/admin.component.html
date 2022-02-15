@@ -1,0 +1,32 @@
+<p>admin works!</p>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-inverse">
+    <a class="navbar-brand" href="#">welcome to Book Store!</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/register">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/address">Address</a>
+            </li>
+
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="/adminlogin"><span class="glyphicon glyphicon-Admin"></span> admin-login </a></li>
+            <li><a routerLink="/adminregister"><span class="glyphicon glyphicon-log-out"></span> Admin-register</a></li>
+          </ul>
+
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

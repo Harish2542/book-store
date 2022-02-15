@@ -1,0 +1,25 @@
+<p>cart works!</p>
+<div class="cart products" *ngIf="isCartOpen">
+    <h1>My Cart</h1>
+    <table style="width:100%">
+      <tr>
+        <th>Id</th>
+        <th>name</th>
+        <th>author</th>
+        <th>Cost</th>
+        <th>qnt</th>
+      </tr>
+      <tr *ngFor="let y of cartItems">
+        <td> {{y.id}}</td>
+        <td> {{y.name}}</td>
+        <td>{{y.author}}</td>
+        <td> {{y.cost}}</td>
+        <td>{{y.qnt}}</td>
+        <td><button (click)="increase(y)">+</button> </td>
+      
+        <td><button (click)="decrease(y)">-</button></td>
+      </tr>
+      <tr>Total Amount : {{totalAmt}}</tr>
+    </table>
+    <button class="btn btn-primary" (click)="address()">Add Address</button>
+  </div>
